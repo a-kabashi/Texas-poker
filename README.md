@@ -1,2 +1,2 @@
-# TexasHoldemPoker
-Texas Holdem Poker
+# TexasPoker
+Texas Poker
