@@ -1,3 +1,4 @@
+
 package texasPoker;
 
 import java.awt.event.ActionEvent;
@@ -6,7 +7,7 @@ import java.util.Random;
 
 /**
  *
- * @author 
+ * @author Team 
  */
 public class Controller {
     
@@ -36,12 +37,13 @@ public class Controller {
         this.gamePage.addjButtonCall(new jButtonCallListener());
         this.gamePage.addjButtonFold(new jButtonFoldListener());
     }
-
+    
+    //prints out the the winner or draw according to the return from identifyWinner method.
     private void displayWinner() {
-        int playerRank = this.dealer.DetermineBestHand(this.dealer.getPlayerCards(), this.dealer.getCommunityCards());
-        int computerRank = this.dealer.DetermineBestHand(this.dealer.getPlayer2Cards(), this.dealer.getCommunityCards());
+        int pRank = this.dealer.DetermineBestHand(this.dealer.getPlayerCards(), this.dealer.getCommunityCards());
+        int compRank = this.dealer.DetermineBestHand(this.dealer.getPlayer2Cards(), this.dealer.getCommunityCards());
         
-        String winner = this.dealer.identifyWinner(playerRank, computerRank);
+        String winner = this.dealer.identifyWinner(pRank, compRank);
         
         switch(winner){
             case "Player":
@@ -53,17 +55,17 @@ public class Controller {
                this.hndBet("P->C"); 
                break;
             case "Draw":
-               this.gamePage.setDisplayWinner("Draw!");
+               this.gamePage.setDisplayWinner("Tide!!");
                break;
             default:
                 break;
         }
         
-        this.gamePage.setPlayer2BestHand(this.dealer.identifyHouselast(computerRank));
-        this.gamePage.setPlayerBestHand(this.dealer.identifyHouselast(playerRank));
+        this.gamePage.setPlayer2BestHand(this.dealer.identifyHouselast(compRank));
+        this.gamePage.setPlayerBestHand(this.dealer.identifyHouselast(pRank));
     }
-
-    private void displayWinnerAsComputer() {
+    
+    private void displayCompWin() {
         this.gamePage.setDisplayWinner("The Player2 Won!");
         
         this.gamePage.setPlayer2BestHand("Winner!");
@@ -72,7 +74,7 @@ public class Controller {
         this.hndBet("P->C"); 
     }
 
-    private void displayWinnerAsPlayer() {
+    private void displayPWin() {
         this.gamePage.setDisplayWinner("The Player1 Won!");
         
         this.gamePage.setPlayer2BestHand("FOLD!");
@@ -80,8 +82,8 @@ public class Controller {
 
         this.hndBet("C->P"); 
     }
-
-    private void hideAllCards() {
+    // draws the back card picture for all cards on the table.
+    private void hideCards() {
         this.gamePage.setPlayerCard1(52);
         this.gamePage.setPlayerCard2(52);
         
@@ -95,8 +97,9 @@ public class Controller {
         this.gamePage.setCommunityCard5(52);
            
     }
-
-    private void computerPlays() {
+    
+    // computer game logic
+    private void compPlays() {
         Random rand = new Random();
         
         this.computer.setDifficultyLevel(this.gamePage.getDifficultyLevel());
@@ -114,7 +117,7 @@ public class Controller {
                         this.gamePage.setcomputerDecision("Call!");
                 } else { 
                         this.gamePage.setcomputerDecision("Fold!");
-                        this.displayWinnerAsPlayer();
+                        this.displayPWin();
                 }   
                 break;
             case "Medium":
@@ -127,7 +130,7 @@ public class Controller {
                         this.gamePage.setcomputerDecision("Call!");
                 } else { //
                         this.gamePage.setcomputerDecision("Fold!");
-                        this.displayWinnerAsPlayer();
+                        this.displayPWin();
                 }   
                 break;
             case "Hard":
@@ -140,7 +143,7 @@ public class Controller {
                         this.gamePage.setcomputerDecision("Call!");
                 } else { //Folds
                         this.gamePage.setcomputerDecision("Fold!");
-                        this.displayWinnerAsPlayer();
+                        this.displayPWin();
                 }   
                 break;
             default:
@@ -148,7 +151,7 @@ public class Controller {
         }
             
     }
-
+    
     private void hndBet(String dec) {
         if (dec.equals("P->C")){
             this.computer.raiseBet(this.player.getBet());
@@ -167,7 +170,7 @@ public class Controller {
         
         @Override
         public void actionPerformed(ActionEvent e) {
-            playerCall();
+            pCall();
         }
     }
     
@@ -175,7 +178,7 @@ public class Controller {
         
         @Override
         public void actionPerformed(ActionEvent e) {
-            playerFold();
+            pFold();
         }
     }
     
@@ -183,7 +186,7 @@ public class Controller {
         
         @Override
         public void actionPerformed(ActionEvent e) {
-            playerRaise(gamePage.getPlayerBet());
+            pRaise(gamePage.getPlayerBet());
         }
     }
     private class jButtonStarterGameListener implements ActionListener {
@@ -210,30 +213,30 @@ public class Controller {
         }
     }
     
-    public void displayPlayerCards(){
+    public void displayPCards(){
         this.gamePage.setPlayerCard1(this.dealer.getPlayerCards()[0]);
         this.gamePage.setPlayerCard2(this.dealer.getPlayerCards()[1]);
     }
     
-    public void displayThreeCards(){
+    public void dispThreeCards(){
             this.gamePage.setCommunityCard1(this.dealer.getCommunityCards()[0]);
             this.gamePage.setCommunityCard2(this.dealer.getCommunityCards()[1]);
             this.gamePage.setCommunityCard3(this.dealer.getCommunityCards()[2]);
     }
     
-    public void displayPlayer2Cards(){
+    public void dispP2Cards(){
         this.gamePage.setComputerCard1(this.dealer.getPlayer2Cards()[0]);
         this.gamePage.setComputerCard2(this.dealer.getPlayer2Cards()[1]);
     }
     
-    public void displayFourthCards(){
+    public void dispFourthCards(){
         this.gamePage.setCommunityCard1(this.dealer.getCommunityCards()[0]);
             this.gamePage.setCommunityCard2(this.dealer.getCommunityCards()[1]);
             this.gamePage.setCommunityCard3(this.dealer.getCommunityCards()[2]);
         this.gamePage.setCommunityCard4(this.dealer.getCommunityCards()[3]);
     }
     
-    public void displayFifthCards(){
+    public void dispFifthCard(){
         this.gamePage.setCommunityCard1(this.dealer.getCommunityCards()[0]);
             this.gamePage.setCommunityCard2(this.dealer.getCommunityCards()[1]);
             this.gamePage.setCommunityCard3(this.dealer.getCommunityCards()[2]);
@@ -241,51 +244,52 @@ public class Controller {
                this.gamePage.setCommunityCard5(this.dealer.getCommunityCards()[4]);
 
     }
-    
+    // reset the game logic and game page.
     public void newRound(){
         this.stage = 0;
         
         this.dealer.shuffleDeck();
         this.dealer.dealCards();
         
-        hideAllCards();
+        hideCards();
         
-        displayPlayerCards();        
+        displayPCards();        
     }
     
-    public void playerRaise(int bet){
+    // player raise bet logic.
+    public void pRaise(int bet){
 
         switch (this.stage){
             case 0:
                 this.player.raiseBet(bet);
                 this.gamePage.setPlayerBet(Integer.toString(this.player.getBet()));
                 
-                this.computerPlays();
+                this.compPlays();
       
                 
-                this.displayThreeCards();
+                this.dispThreeCards();
                 this.stage++;
                 break;
             case 1:
                 this.player.raiseBet(bet);
                 this.gamePage.setPlayerBet(Integer.toString(this.player.getBet()));
                 
-                this.computerPlays();
+                this.compPlays();
                 
-                this.displayFourthCards();
+                this.dispFourthCards();
                 this.stage++;
                 break;
             case 2:
                 this.player.raiseBet(bet);
                 this.gamePage.setPlayerBet(Integer.toString(this.player.getBet()));
                 
-                this.computerPlays();
+                this.compPlays();
 
-                this.displayFifthCards();
+                this.dispFifthCard();
                 this.stage++;
                 break;
             case 3:
-                this.displayPlayer2Cards();
+                this.dispP2Cards();
                 this.displayWinner();
                 break;
             default:
@@ -293,38 +297,39 @@ public class Controller {
                 break;
         }
     }
-    public void playerFold(){
-        this.displayWinnerAsComputer();
+    public void pFold(){
+        this.displayCompWin();
     }
     
-    public void playerCall(){
+    // player call logic
+    public void pCall(){
         switch (this.stage){
             case 0:
-                this.displayThreeCards();
-                this.computerPlays();
+                this.dispThreeCards();
+                this.compPlays();
 
                 this.stage++;
                 break;
             case 1:
-                this.displayFourthCards();
-                this.computerPlays();
+                this.dispFourthCards();
+                this.compPlays();
                 this.stage++;
                 break;
             case 2:
-                this.displayFifthCards();
-                this.computerPlays();
+                this.dispFifthCard();
+                this.compPlays();
                 this.stage++;
                 break;
             case 3:
                 this.displayWinner();
-                this.displayPlayer2Cards();
+                this.dispP2Cards();
                 break;
             default:
                 this.displayWinner();
                 break;
         }
     }
-       
+    
     public void startGame(){
         
         this.player.setName(this.startPage.getPlayerName());
@@ -332,6 +337,7 @@ public class Controller {
         this.startPage.dispose();
         this.gamePage.setPlayerName(this.player.getName());
     }
+    
     public void launchGame(){
         this.startPage.setVisible(true);
     }
