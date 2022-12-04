@@ -84,104 +84,69 @@ public class Dealer extends GameLogic{
         String[] compare = new String[10];
         compare = helper(towCards, fiveCards);
 
-        int counter = 10;
+        int count = 10;
         for (int i = 0; i < 10; i++) {
 
             if (compare[i].equals("Royal Flush")) {
                 
-                counter = 1;
+                count = 1;
                 return 1;
             } else if (compare[i].equals("Striaght Flush")) {
-                   if(counter>2){
-                         counter = 2;
+                   if(count>2){
+                         count = 2;
                    }
 
             } else if (compare[i].equals("Four of a kind")) {
-                if(counter>3){
-                     counter = 3;
+                if(count>3){
+                     count = 3;
                 }
                         
 
             } else if (compare[i].equals("Full House")) {
-                if(counter>4){
-                     counter = 4;
+                if(count>4){
+                     count = 4;
                 }
                    
 
             }
 
             else if (compare[i].equals("Flush")) {
-                if(counter>5){
-                     counter = 5;
+                if(count>5){
+                     count = 5;
                 }
                       
 
             } else if (compare[i].equals("Straight")) {
-                   if(counter>6){
-                        counter = 6;
+                   if(count>6){
+                        count = 6;
                    }
 
             } else if (compare[i].equals("Three of kind")) {
-                if(counter>7){
-                     counter = 7;
+                if(count>7){
+                     count = 7;
                 }
                         
 
             } else if (compare[i].equals("Two Pairs")) {
-                   if(counter>8){
-                        counter = 8;
+                   if(count>8){
+                        count = 8;
                    }
 
             } else if (compare[i].equals("One Pair")) {
-                if(counter>9){
-                    counter = 9;
+                if(count>9){
+                    count = 9;
                 }
                        
 
             } else {
-                if(counter == 10)
-                    counter =  10;
+                if(count == 10)
+                    count =  10;
             }
         }
-        return counter;
-    }
-            
-    private String nameOfHand(int[] hand){
-        
-        return "";
+        return count;
     }
     
-    private int rankOfHand(int[] hand){
-        
-        return 0;
-    }
     
-    /*
-    * sortArr takes array of integer representing the Poker Hand, then it order
-    * them regarding to its position as element%13
-    *
-    */
-    public int[] sortArr(int[] hand) {
-        int min = hand[0] % 13;
-        int index = 0;
-        int temp;
-        for (int i = 0; i < hand.length; i++) {
-            index = i;
-            min = hand[i] % 13;
-            for (int x = i; x < hand.length; x++) {
-                if (hand[x] % 13 < min) {
-                    min = hand[x] % 13;
-                    index = x;
-                }
-            }
-            temp = hand[i];
-            hand[i] = hand[index];
-            hand[index] = temp;
-
-        } 
-        return hand;
-    }
-
     /*
     *isSameKind method it takes an array of integer and return boolean, its deteraom
     *if its the same kind or not.
@@ -320,25 +285,25 @@ public class Dealer extends GameLogic{
     /*
     *identifyHouselast method it takes an integer and return.
     */
-    public String identifyHouselast(int counter){
+    public String identifyHouselast(int count){
         
-            if (counter == 1)
+            if (count == 1)
                 return "Royal Flush";
-            else if (counter == 2)
+            else if (count == 2)
                 return "Striaght Flush";
-            else if (counter == 3)
+            else if (count == 3)
                 return "Four of a kind";
-            else if (counter == 4)
+            else if (count == 4)
                 return "Full House";
-            else if (counter == 5)
+            else if (count == 5)
                 return "Flush";
-            else if (counter == 6)
+            else if (count == 6)
                 return "Straight";
-            else if (counter == 7)
+            else if (count == 7)
                 return "Three of kind";
-            else if (counter == 8)
+            else if (count == 8)
                 return "Two Pairs";
-            else if (counter == 9)
+            else if (count == 9)
                 return "One Pair";
             else  
                 return "High Card";

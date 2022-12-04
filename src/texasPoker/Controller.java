@@ -46,11 +46,11 @@ public class Controller {
         switch(winner){
             case "Player":
                this.gamePage.setDisplayWinner("The Winner is Player!");
-               this.handOverBet("C->P"); 
+               this.hndBet("C->P"); 
                break;
             case "Computer":
                this.gamePage.setDisplayWinner("The Winner is Computer!");
-               this.handOverBet("P->C"); 
+               this.hndBet("P->C"); 
                break;
             case "Draw":
                this.gamePage.setDisplayWinner("Draw!");
@@ -69,7 +69,7 @@ public class Controller {
         this.gamePage.setPlayer2BestHand("Winner!");
         this.gamePage.setPlayerBestHand("FOLD!");
 
-        this.handOverBet("P->C"); 
+        this.hndBet("P->C"); 
     }
 
     private void displayWinnerAsPlayer() {
@@ -78,7 +78,7 @@ public class Controller {
         this.gamePage.setPlayer2BestHand("FOLD!");
         this.gamePage.setPlayerBestHand("Winner!");
 
-        this.handOverBet("C->P"); 
+        this.hndBet("C->P"); 
     }
 
     private void hideAllCards() {
@@ -149,7 +149,7 @@ public class Controller {
             
     }
 
-    private void handOverBet(String dec) {
+    private void hndBet(String dec) {
         if (dec.equals("P->C")){
             this.computer.raiseBet(this.player.getBet());
             this.player.setBet(0);
