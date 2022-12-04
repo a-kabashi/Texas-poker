@@ -9,7 +9,7 @@ import java.util.Random;
 
 /**
  *
- * @author mvami
+ * @author 
  */
 public class Player2 extends Player {
     private int decision;

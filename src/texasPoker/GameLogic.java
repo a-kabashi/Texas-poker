@@ -8,7 +8,7 @@ import java.util.Arrays;
 
 /**
  *
- * @author Team.
+ * @author 
  */
 class GameLogic {
     public String identifyHand(int[] hand){

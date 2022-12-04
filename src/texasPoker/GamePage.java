@@ -1,6 +1,6 @@
 /**
  *
- * @author Mohmmed Mohammed and Alex Jonathan Mvami Njeunje 
+ * @author  
  */
 package texasPoker;
 
@@ -286,35 +286,35 @@ public class GamePage extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonCallActionPerformed
 
     public void setPlayerCard1(int cardNmuber){
-        jLabelPlayerCard1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/texasholdempoker/images/"+String.valueOf(cardNmuber)+".png")));
+        jLabelPlayerCard1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/texaspoker/images/"+String.valueOf(cardNmuber)+".png")));
     }
     
     public void setPlayerCard2(int cardNmuber){
-        jLabelPlayerCard2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/texasholdempoker/images/"+String.valueOf(cardNmuber)+".png")));
+        jLabelPlayerCard2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/texaspoker/images/"+String.valueOf(cardNmuber)+".png")));
     }
     
     public void setComputerCard1(int cardNmuber){
-        jLabelComputerCard1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/texasholdempoker/images/"+String.valueOf(cardNmuber)+".png")));
+        jLabelComputerCard1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/texaspoker/images/"+String.valueOf(cardNmuber)+".png")));
     }
     
     public void setComputerCard2(int cardNmuber){
-        jLabelComputerCard2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/texasholdempoker/images/"+String.valueOf(cardNmuber)+".png")));
+        jLabelComputerCard2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/texaspoker/images/"+String.valueOf(cardNmuber)+".png")));
     }
     
     public void setCommunityCard1(int cardNmuber){
-        jLabelCommunityCard1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/texasholdempoker/images/"+String.valueOf(cardNmuber)+".png")));
+        jLabelCommunityCard1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/texaspoker/images/"+String.valueOf(cardNmuber)+".png")));
     }
     public void setCommunityCard2(int cardNmuber){
-        jLabelCommunityCard2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/texasholdempoker/images/"+String.valueOf(cardNmuber)+".png")));
+        jLabelCommunityCard2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/texaspoker/images/"+String.valueOf(cardNmuber)+".png")));
     }
     public void setCommunityCard3(int cardNmuber){
-        jLabelCommunityCard3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/texasholdempoker/images/"+String.valueOf(cardNmuber)+".png")));
+        jLabelCommunityCard3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/texaspoker/images/"+String.valueOf(cardNmuber)+".png")));
     }
     public void setCommunityCard4(int cardNmuber){
-        jLabelCommunityCard4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/texasholdempoker/images/"+String.valueOf(cardNmuber)+".png")));
+        jLabelCommunityCard4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/texaspoker/images/"+String.valueOf(cardNmuber)+".png")));
     }
     public void setCommunityCard5(int cardNmuber){
-        jLabelCommunityCard5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/texasholdempoker/images/"+String.valueOf(cardNmuber)+".png")));
+        jLabelCommunityCard5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/texaspoker/images/"+String.valueOf(cardNmuber)+".png")));
     }
     
     public void addjButtonNewRound(ActionListener listener){

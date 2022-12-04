@@ -11,7 +11,7 @@ import java.util.Collections;
 
 /**
  *
- * @author mvami
+ * @author 
  */
 public class Dealer extends GameLogic{
     private ArrayList<Integer> deck;

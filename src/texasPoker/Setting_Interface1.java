@@ -5,7 +5,7 @@ import java.awt.Color;
 
 /**
  *
- * @author User
+ * @author 
  */
 public class Setting_Interface1 extends javax.swing.JFrame {
 
