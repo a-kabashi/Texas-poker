@@ -6,7 +6,7 @@ package texasPoker;
 
 /**
  *
- * @author User
+ * @author 
  */
 public class HelpingPage extends javax.swing.JFrame {
 

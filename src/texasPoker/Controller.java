@@ -6,7 +6,7 @@ import java.util.Random;
 
 /**
  *
- * @author Team.
+ * @author 
  */
 public class Controller {
     
