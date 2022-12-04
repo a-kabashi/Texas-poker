@@ -207,7 +207,7 @@ public String[] helper(int[] towCards, int[] fiveCards){
         String compare5 = identifyHand(bestHand);
         compare[4] = compare5;
 
-        // 145
+        // one, four, five
         bestHand[0] = towCards[0];
         bestHand[1] = towCards[1];
         bestHand[2] = fiveCards[0];
@@ -267,63 +267,63 @@ public int determineBestHand(int[] towCards, int[] fiveCards){
         String[] compare = new String[10];
         compare = helper(towCards, fiveCards);
 
-        int counter = 10;
+        int count = 10;
         for (int i = 0; i < 10; i++) {
 
             if (compare[i].equals("Royal Flush")) {
                 
-                counter = 1;
+                count = 1;
                 return 1;
             } else if (compare[i].equals("Striaght Flush")) {
-                   if(counter>2){
-                         counter = 2;
+                   if(count>2){
+                         count = 2;
                    }
 
             } else if (compare[i].equals("Four of a kind")) {
-                if(counter>3){
-                     counter = 3;
+                if(count>3){
+                     count = 3;
                 }
                         
 
             } else if (compare[i].equals("Full House")) {
-                if(counter>4){
-                     counter = 4;
+                if(count>4){
+                     count = 4;
                 }
                    
 
             }
 
             else if (compare[i].equals("Flush")) {
-                if(counter>5){
-                     counter = 5;
+                if(count>5){
+                     count = 5;
                 }
                       
 
             } else if (compare[i].equals("Straight")) {
-                   if(counter>6){
-                        counter = 6;
+                   if(count>6){
+                        count = 6;
                    }
 
             } else if (compare[i].equals("Three of kind")) {
-                if(counter>7){
-                     counter = 7;
+                if(count>7){
+                     count = 7;
                 }
                         
 
             } else if (compare[i].equals("Two Pairs")) {
-                   if(counter>8){
-                        counter = 8;
+                   if(count>8){
+                        count = 8;
                    }
 
             } else if (compare[i].equals("One Pair")) {
-                if(counter>9){
-                    counter = 9;
+                if(count>9){
+                    count = 9;
                 }
                        
 
             } else {
-                if(counter == 10)
-                    counter =  10;
+                if(count == 10)
+                    count =  10;
             }
         }
         return 10;
