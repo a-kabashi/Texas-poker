@@ -7,7 +7,7 @@ import java.util.Collections;
 
 /**
  *
- * @author 
+ * @author Team.
  */
 public class Dealer extends GameLogic{
     private ArrayList<Integer> deck;
@@ -75,7 +75,9 @@ public class Dealer extends GameLogic{
         for(int i = 0; i <= 1; i++) player2Cards[i] = deck.get(i+7);
     }
     
-
+    /* it takes the two cards of the player and the five community cards,
+    * and returns integer count according to the best five cards.
+    */
     public int DetermineBestHand(int[] towCards, int[] fiveCards){    
         String[] compare = new String[10];
         compare = helper(towCards, fiveCards);
@@ -162,40 +164,40 @@ public class Dealer extends GameLogic{
     }
 
     /*
-    * identifyHand takes an array of intege representing the Hand, then determine the
+    * idenHnd takes an array of intege representing the Hand, then determine the
     * kind of hand and return it, as String.
     */
-    public String identifyHand(int[] hand) {
+    public String idenHnd(int[] hand) {
         
-        boolean isItThreeOfKind = false;
-        boolean isItStraight = true;
-        boolean isItStraightFlush = true;
-        int isItFullHouse = 0;
-        int[] fourOrFullHouse = new int[5];
+        boolean isThreeKnd = false;
+        boolean isStrt = true;
+        boolean isStrtFlush = true;
+        int isFH = 0;
+        int[] fourOrFH = new int[5];
         int count = 10;
         
         for (int i = 0, j = 0; i < hand.length - 1; i++) {
             if (!(hand[i] == (hand[i + 1] - 1)))
-                isItStraightFlush = false;
+                isStrtFlush = false;
 
             if (!(hand[i] % 13 == ((hand[i + 1] % 13) - 1)))
-                isItStraight = false;
+                isStrt = false;
 
             if (hand[i] % 13 == hand[i + 1] % 13) {
-                isItFullHouse++;
-                fourOrFullHouse[j++] = hand[i];
+                isFH++;
+                fourOrFH[j++] = hand[i];
 
             } else
             count = i;
         } 
 
-        if (isItStraightFlush || (isSameKind(hand) && isItStraigthAceTop(hand))) {
+        if (isStrtFlush || (isSameKind(hand) && strtAceTop(hand))) {
             if (Royal_Flush(hand)) {
                 return "Royal Flush";
             }
             return "Striaght Flush";
         } // end of if
-        else if (isItFullHouse == 3) {
+        else if (isFH == 3) {
             if (count == 0 || count == 3)
                 return "Four of a kind";
             else
@@ -203,7 +205,7 @@ public class Dealer extends GameLogic{
         } // end of if
         else if (isSameKind(hand))
             return "Flush";
-        else if (isItStraight || isItStraigthAceTop(hand))
+        else if (isStrt || strtAceTop(hand))
             return "Straight";
         else {
             boolean co = false;
@@ -212,7 +214,7 @@ public class Dealer extends GameLogic{
             for (int i = 0, j = 0; i < hand.length - 1; i++) {
                 if (hand[i] % 13 == hand[i + 1] % 13) {
                 if (co)
-                    isItThreeOfKind = true;
+                    isThreeKnd = true;
 
                 ofSuit[j++] = hand[i];
                 co = true;
@@ -221,7 +223,7 @@ public class Dealer extends GameLogic{
                 else
                     co = false;
             } // end of for loop
-            if (isItThreeOfKind)
+            if (isThreeKnd)
                 return "Three of kind";
             else if (forTwo == 2)
                 return "Two Pairs";
@@ -251,10 +253,10 @@ public class Dealer extends GameLogic{
     }
 
     /*
-    * isItStraigthAceTop method it takes an array of integer "hand", and checks if its Straight, 
+    * strtAceTop method it takes an array of integer "hand", and checks if its Straight, 
     * when the Ace on Top, and return boolean type regard to that.
     */
-    public boolean isItStraigthAceTop(int[] hand) {
+    public boolean strtAceTop(int[] hand) {
 
         int han[] = new int[5];
 
@@ -279,7 +281,7 @@ public class Dealer extends GameLogic{
     }
     
     /*
-    *identifyHouselast method it takes an integer and return.
+    *identifyHouselast method it takes an integer count and returns string of the type of the hand.
     */
     public String identifyHouselast(int count){
         
@@ -309,11 +311,11 @@ public class Dealer extends GameLogic{
     }
     
  
-    public String identifyWinner(int player1Hand, int player2Hand){
-        if(player1Hand < player2Hand){
+    public String identifyWinner(int p1Hnd, int p2Hnd){
+        if(p1Hnd < p2Hnd){
             return "Player1";
         }
-        if(player1Hand > player2Hand){
+        if(p1Hnd > p2Hnd){
             return  "player2";
         }
         return "Draw";
