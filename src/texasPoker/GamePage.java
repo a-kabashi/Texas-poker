@@ -58,7 +58,8 @@ public class GamePage extends javax.swing.JFrame {
 
         jLayeredPane1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setBackground(new java.awt.Color(255, 102, 0));
+        jButton1.setBackground(new java.awt.Color(255, 0, 0));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton1.setText("Exit");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,27 +71,30 @@ public class GamePage extends javax.swing.JFrame {
         computerBestHand.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         computerBestHand.setForeground(new java.awt.Color(255, 255, 255));
         computerBestHand.setText("...");
-        jLayeredPane1.add(computerBestHand, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 360, 180, 40));
+        jLayeredPane1.add(computerBestHand, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 360, 140, 40));
 
         playerBestHand.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         playerBestHand.setForeground(new java.awt.Color(255, 255, 255));
         playerBestHand.setText("...");
-        jLayeredPane1.add(playerBestHand, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 340, 110, 40));
+        jLayeredPane1.add(playerBestHand, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 340, 100, 40));
 
-        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(255, 255, 0));
         jLabel19.setText("The player1 has:");
-        jLayeredPane1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 350, 110, 20));
+        jLayeredPane1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 350, 120, 20));
 
         computerDecision.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         computerDecision.setForeground(new java.awt.Color(255, 255, 0));
         computerDecision.setText("Dicision");
         jLayeredPane1.add(computerDecision, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 0, 10, 40));
 
-        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 0));
         jLabel16.setText("The player2 has:");
-        jLayeredPane1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 370, 130, -1));
+        jLayeredPane1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 366, 130, 20));
 
-        jButtonHelp.setBackground(new java.awt.Color(255, 255, 204));
+        jButtonHelp.setBackground(new java.awt.Color(255, 255, 0));
+        jButtonHelp.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButtonHelp.setText("Help?");
         jButtonHelp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,7 +126,7 @@ public class GamePage extends javax.swing.JFrame {
         jTextFieldDisplayWinner.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jTextFieldDisplayWinner.setForeground(new java.awt.Color(255, 255, 255));
         jTextFieldDisplayWinner.setText("...");
-        jLayeredPane1.add(jTextFieldDisplayWinner, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 90, 190, 120));
+        jLayeredPane1.add(jTextFieldDisplayWinner, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 90, 190, 90));
 
         jLabelCommunityCard1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/texasPoker/images/52.png"))); // NOI18N
         jLayeredPane1.add(jLabelCommunityCard1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 210, 70, 100));
@@ -131,10 +135,10 @@ public class GamePage extends javax.swing.JFrame {
         jLayeredPane1.add(jLabelCommunityCard2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, 70, 100));
 
         jLabelPlayerName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabelPlayerName.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelPlayerName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabelPlayerName.setForeground(new java.awt.Color(255, 255, 0));
+        jLabelPlayerName.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabelPlayerName.setText("Player name");
-        jLayeredPane1.add(jLabelPlayerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 470, 90, -1));
+        jLayeredPane1.add(jLabelPlayerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 470, 110, -1));
 
         jLabelCommunityCard3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/texasPoker/images/52.png"))); // NOI18N
         jLayeredPane1.add(jLabelCommunityCard3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 210, 70, 100));
@@ -146,6 +150,7 @@ public class GamePage extends javax.swing.JFrame {
         jLayeredPane1.add(jLabelCommunityCard5, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 210, 70, 100));
 
         jButtonRaise.setBackground(new java.awt.Color(153, 0, 153));
+        jButtonRaise.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButtonRaise.setForeground(new java.awt.Color(255, 255, 255));
         jButtonRaise.setText("Raise");
         jButtonRaise.addActionListener(new java.awt.event.ActionListener() {
@@ -156,6 +161,7 @@ public class GamePage extends javax.swing.JFrame {
         jLayeredPane1.add(jButtonRaise, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 80, 90, 40));
 
         jButtonFold.setBackground(new java.awt.Color(153, 0, 153));
+        jButtonFold.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButtonFold.setForeground(new java.awt.Color(255, 255, 255));
         jButtonFold.setText("Fold");
         jButtonFold.addActionListener(new java.awt.event.ActionListener() {
@@ -200,6 +206,7 @@ public class GamePage extends javax.swing.JFrame {
         jLayeredPane1.add(jButtonNewRound, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 0, 130, 70));
 
         jButtonCall.setBackground(new java.awt.Color(153, 0, 153));
+        jButtonCall.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButtonCall.setForeground(new java.awt.Color(255, 255, 255));
         jButtonCall.setText("Next Step");
         jButtonCall.addActionListener(new java.awt.event.ActionListener() {
@@ -240,6 +247,7 @@ public class GamePage extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
