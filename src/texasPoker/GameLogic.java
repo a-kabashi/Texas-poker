@@ -5,65 +5,65 @@ import java.util.Arrays;
 
 /**
  *
- * @author 
+ * @author Team.
  */
 class GameLogic {
-    public String identifyHand(int[] hand){
+    public String identHnd(int[] hnd){
         
-        int[] fourOrFullHouse = new int[5];
-        int fullHouse = 0;
+        int[] fourOrFH = new int[5];
+        int fH = 0;
         int count = 10;
-        boolean straight = true;
-        boolean straightFlush = true;
-        boolean threeOfKind = false;
+        boolean strt = true;
+        boolean strtFlush = true;
+        boolean threeKnd = false;
         
-        for (int i = 0, j = 0; i < hand.length - 1; i++) {
-            if (!(hand[i] == (hand[i + 1] - 1)))
-                straightFlush = false;
+        for (int i = 0, j = 0; i < hnd.length - 1; i++) {
+            if (!(hnd[i] == (hnd[i + 1] - 1)))
+                strtFlush = false;
 
-            if (!(hand[i] % 13 == ((hand[i + 1] % 13) - 1)))
-                straight = false;
+            if (!(hnd[i] % 13 == ((hnd[i + 1] % 13) - 1)))
+                strt = false;
 
-            if (hand[i] % 13 == hand[i + 1] % 13) {
-                fullHouse++;
-                fourOrFullHouse[j++] = hand[i];
+            if (hnd[i] % 13 == hnd[i + 1] % 13) {
+                fH++;
+                fourOrFH[j++] = hnd[i];
             } else
             count = i;
         } 
 
-        if (straightFlush || (isSameKind(hand) && isItStraigthAceTop(hand))) {
-            if (Royal_Flush(hand)) {
+        if (strtFlush || (sameKnd(hnd) && strtAceTop(hnd))) {
+            if (Royal_Flush(hnd)) {
                 return "Royal Flush";
             }
             return "Striaght Flush";
         }
-        else if (fullHouse == 3) {
+        else if (fH == 3) {
             if (count == 0 || count == 3)
                 return "Four of a kind";
             else
                 return "Full House";
         }
-        else if (isSameKind(hand))
+        else if (sameKnd(hnd))
             return "Flush";
-        else if (straight || isItStraigthAceTop(hand))
-            return "Straight";
+        else if (strt || strtAceTop(hnd))
+            return "strt";
         else {
             boolean co = false;
             int forTwo = 0;
             int ofSuit[] = new int[2];
-            for (int i = 0, j = 0; i < hand.length - 1; i++) {
-                if (hand[i] % 13 == hand[i + 1] % 13) {
+            for (int i = 0, j = 0; i < hnd.length - 1; i++) {
+                if (hnd[i] % 13 == hnd[i + 1] % 13) {
                 if (co)
-                    threeOfKind = true;
+                    threeKnd = true;
 
-                ofSuit[j++] = hand[i];
+                ofSuit[j++] = hnd[i];
                 co = true;
                 forTwo++;
                 } 
                 else
                     co = false;
             } 
-            if (threeOfKind)
+            if (threeKnd)
                 return "Three of kind";
             else if (forTwo == 2)
                 return "Two Pairs";
@@ -76,25 +76,25 @@ class GameLogic {
 
     }
     //All four possable ways for Royal flush.
-    public boolean Royal_Flush(int[] hand) {
-        sortArr(hand);
+    public boolean Royal_Flush(int[] hnd) {
+        sortArr(hnd);
         int[] h = { 0, 9, 10, 11, 12 };
         int[] d = { 13, 22, 23, 24, 25 };
         int[] c = { 26, 35, 36, 37, 38 };
         int[] s = { 39, 48, 49, 50, 51 };
         //h:heard/ d:diamonds/c:clubs/s:speads.
-        if (Arrays.equals(hand, h) || Arrays.equals(hand, d) || Arrays.equals(hand, c) || Arrays.equals(hand, s))
+        if (Arrays.equals(hnd, h) || Arrays.equals(hnd, d) || Arrays.equals(hnd, c) || Arrays.equals(hnd, s))
             return true;
         return false;
 
     }
         
-        public boolean isSameKind(int[] hand) {
+        public boolean sameKnd(int[] hnd) {
         int cont;
         for (int i = 0; i < 4; i++) {
             cont = 0;
-            for (int j = 0; j < hand.length; j++) {
-                if (hand[j] / 13 == i)
+            for (int j = 0; j < hnd.length; j++) {
+                if (hnd[j] / 13 == i)
                     cont++;
             } 
             if (cont == 5)
@@ -103,17 +103,17 @@ class GameLogic {
         return false;
     }
         
-        public boolean isItStraigthAceTop(int[] hand) {
+        public boolean strtAceTop(int[] hnd) {
 
         int han[] = new int[5];
 
       
 
-        for (int i = 0; i < hand.length; i++) {
-            if (hand[i] % 13 == 0)
-                han[i] = hand[i] + 12;
+        for (int i = 0; i < hnd.length; i++) {
+            if (hnd[i] % 13 == 0)
+                han[i] = hnd[i] + 12;
             else
-                han[i] = hand[i] - 1;
+                han[i] = hnd[i] - 1;
         } 
 
         sortArr(han);
@@ -128,130 +128,130 @@ class GameLogic {
 
 
   // this method for sorting the array hand base on suite.it's check the hand in all deck 52 cards.
-  public int[] sortArr(int[] hand) {
-        int min = hand[0] % 13;
+  public int[] sortArr(int[] hnd) {
+        int min = hnd[0] % 13;
         int index = 0;
         int temp;
-        for (int i = 0; i < hand.length; i++) {
+        for (int i = 0; i < hnd.length; i++) {
             index = i;
-            min = hand[i] % 13;
-            for (int x = i; x < hand.length; x++) {
-                if (hand[x] % 13 < min) {
-                    min = hand[x] % 13;
+            min = hnd[i] % 13;
+            for (int x = i; x < hnd.length; x++) {
+                if (hnd[x] % 13 < min) {
+                    min = hnd[x] % 13;
                     index = x;
                 }
             }
-            temp = hand[i];
-            hand[i] = hand[index];
-            hand[index] = temp;
+            temp = hnd[i];
+            hnd[i] = hnd[index];
+            hnd[index] = temp;
 
         } 
-        return hand;
+        return hnd;
     }
 
 // this method for checking the 10 ways trying the best one first going to the lower rank.
-public String[] helper(int[] towCards, int[] fiveCards){
+public String[] helper(int[] twoCards, int[] fiveCards){
 
-        int[] bestHand = new int[5];
+        int[] bestHnd = new int[5];
         String[] compare = new String[10];
         // one two three
-        bestHand[0] = towCards[0];
-        bestHand[1] = towCards[1];
-        bestHand[2] = fiveCards[0];
-        bestHand[3] = fiveCards[1];
-        bestHand[4] = fiveCards[2];
-        sortArr(bestHand);
-        String compare1 = identifyHand(bestHand);
+        bestHnd[0] = twoCards[0];
+        bestHnd[1] = twoCards[1];
+        bestHnd[2] = fiveCards[0];
+        bestHnd[3] = fiveCards[1];
+        bestHnd[4] = fiveCards[2];
+        sortArr(bestHnd);
+        String compare1 = identHnd(bestHnd);
         compare[0] = compare1;
 
         // one two four
-        bestHand[0] = towCards[0];
-        bestHand[1] = towCards[1];
-        bestHand[2] = fiveCards[0];
-        bestHand[3] = fiveCards[1];
-        bestHand[4] = fiveCards[3];
-        sortArr(bestHand);
-        String compare2 = identifyHand(bestHand);
+        bestHnd[0] = twoCards[0];
+        bestHnd[1] = twoCards[1];
+        bestHnd[2] = fiveCards[0];
+        bestHnd[3] = fiveCards[1];
+        bestHnd[4] = fiveCards[3];
+        sortArr(bestHnd);
+        String compare2 = identHnd(bestHnd);
         compare[1] = compare2;
 
         // one two five
-        bestHand[0] = towCards[0];
-        bestHand[1] = towCards[1];
-        bestHand[2] = fiveCards[0];
-        bestHand[3] = fiveCards[1];
-        bestHand[4] = fiveCards[4];
-        sortArr(bestHand);
-        String compare3 = identifyHand(bestHand);
+        bestHnd[0] = twoCards[0];
+        bestHnd[1] = twoCards[1];
+        bestHnd[2] = fiveCards[0];
+        bestHnd[3] = fiveCards[1];
+        bestHnd[4] = fiveCards[4];
+        sortArr(bestHnd);
+        String compare3 = identHnd(bestHnd);
         compare[2] = compare3;
 
         // one three four
-        bestHand[0] = towCards[0];
-        bestHand[1] = towCards[1];
-        bestHand[2] = fiveCards[0];
-        bestHand[3] = fiveCards[2];
-        bestHand[4] = fiveCards[3];
-        sortArr(bestHand);
-        String compare4 = identifyHand(bestHand);
+        bestHnd[0] = twoCards[0];
+        bestHnd[1] = twoCards[1];
+        bestHnd[2] = fiveCards[0];
+        bestHnd[3] = fiveCards[2];
+        bestHnd[4] = fiveCards[3];
+        sortArr(bestHnd);
+        String compare4 = identHnd(bestHnd);
         compare[3] = compare4;
 
         // one three five
-        bestHand[0] = towCards[0];
-        bestHand[1] = towCards[1];
-        bestHand[2] = fiveCards[0];
-        bestHand[3] = fiveCards[2];
-        bestHand[4] = fiveCards[4];
-        sortArr(bestHand);
-        String compare5 = identifyHand(bestHand);
+        bestHnd[0] = twoCards[0];
+        bestHnd[1] = twoCards[1];
+        bestHnd[2] = fiveCards[0];
+        bestHnd[3] = fiveCards[2];
+        bestHnd[4] = fiveCards[4];
+        sortArr(bestHnd);
+        String compare5 = identHnd(bestHnd);
         compare[4] = compare5;
 
         // one, four, five
-        bestHand[0] = towCards[0];
-        bestHand[1] = towCards[1];
-        bestHand[2] = fiveCards[0];
-        bestHand[3] = fiveCards[3];
-        bestHand[4] = fiveCards[4];
-        sortArr(bestHand);
-        String compare6 = identifyHand(bestHand);
+        bestHnd[0] = twoCards[0];
+        bestHnd[1] = twoCards[1];
+        bestHnd[2] = fiveCards[0];
+        bestHnd[3] = fiveCards[3];
+        bestHnd[4] = fiveCards[4];
+        sortArr(bestHnd);
+        String compare6 = identHnd(bestHnd);
         compare[5] = compare6;
 
-        // tow three four
-        bestHand[0] = towCards[0];
-        bestHand[1] = towCards[1];
-        bestHand[2] = fiveCards[1];
-        bestHand[3] = fiveCards[2];
-        bestHand[4] = fiveCards[3];
-        sortArr(bestHand);
-        String compare7 = identifyHand(bestHand);
+        // two three four
+        bestHnd[0] = twoCards[0];
+        bestHnd[1] = twoCards[1];
+        bestHnd[2] = fiveCards[1];
+        bestHnd[3] = fiveCards[2];
+        bestHnd[4] = fiveCards[3];
+        sortArr(bestHnd);
+        String compare7 = identHnd(bestHnd);
         compare[6] = compare7;
 
         // two three five
-        bestHand[0] = towCards[0];
-        bestHand[1] = towCards[1];
-        bestHand[2] = fiveCards[1];
-        bestHand[3] = fiveCards[2];
-        bestHand[4] = fiveCards[4];
-        sortArr(bestHand);
-        String compare8 = identifyHand(bestHand);
+        bestHnd[0] = twoCards[0];
+        bestHnd[1] = twoCards[1];
+        bestHnd[2] = fiveCards[1];
+        bestHnd[3] = fiveCards[2];
+        bestHnd[4] = fiveCards[4];
+        sortArr(bestHnd);
+        String compare8 = identHnd(bestHnd);
         compare[7] = compare8;
 
-        // tow four five
-        bestHand[0] = towCards[0];
-        bestHand[1] = towCards[1];
-        bestHand[2] = fiveCards[1];
-        bestHand[3] = fiveCards[3];
-        bestHand[4] = fiveCards[4];
-        sortArr(bestHand);
-        String compare9 = identifyHand(bestHand);
+        // two four five
+        bestHnd[0] = twoCards[0];
+        bestHnd[1] = twoCards[1];
+        bestHnd[2] = fiveCards[1];
+        bestHnd[3] = fiveCards[3];
+        bestHnd[4] = fiveCards[4];
+        sortArr(bestHnd);
+        String compare9 = identHnd(bestHnd);
         compare[8] = compare9;
 
         // three four five
-        bestHand[0] = towCards[0];
-        bestHand[1] = towCards[1];
-        bestHand[2] = fiveCards[2];
-        bestHand[3] = fiveCards[3];
-        bestHand[4] = fiveCards[4];
-        sortArr(bestHand);
-        String compare10 = identifyHand(bestHand);
+        bestHnd[0] = twoCards[0];
+        bestHnd[1] = twoCards[1];
+        bestHnd[2] = fiveCards[2];
+        bestHnd[3] = fiveCards[3];
+        bestHnd[4] = fiveCards[4];
+        sortArr(bestHnd);
+        String compare10 = identHnd(bestHnd);
         compare[9] = compare10;
 	return compare;
 
@@ -259,10 +259,10 @@ public String[] helper(int[] towCards, int[] fiveCards){
 /*
 * this method for the best choise matching player two cards from five comunity cards.
 */
-public int determineBestHand(int[] towCards, int[] fiveCards){    
+public int determineBestHand(int[] twoCards, int[] fiveCards){    
         
         String[] compare = new String[10];
-        compare = helper(towCards, fiveCards);
+        compare = helper(twoCards, fiveCards);
 
         int count = 10;
         for (int i = 0; i < 10; i++) {
@@ -296,7 +296,7 @@ public int determineBestHand(int[] towCards, int[] fiveCards){
                 }
                       
 
-            } else if (compare[i].equals("Straight")) {
+            } else if (compare[i].equals("Stright")) {
                    if(count>6){
                         count = 6;
                    }
