@@ -121,11 +121,11 @@ public class Settings_Interface2 extends javax.swing.JFrame {
         getContentPane().add(jButton2);
         jButton2.setBounds(40, 285, 110, 30);
 
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\esraa\\OneDrive\\Documents\\NetBeansProjects\\TexasPoker-main\\src\\main\\java\\com\\mycompany\\texaspoker\\img\\gameStarter.jpg")); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\tasni\\OneDrive\\Desktop\\other files\\bg_image.jpg")); // NOI18N
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(0, -10, 560, 390);
+        jLabel5.setBounds(0, -10, 540, 380);
 
-        setSize(new java.awt.Dimension(574, 386));
+        setSize(new java.awt.Dimension(555, 378));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -155,7 +155,7 @@ public class Settings_Interface2 extends javax.swing.JFrame {
         
         Game_Interface game = new Game_Interface(player1.getName(),player1.getBuyInAmount(),player2.getName(),player2.getBuyInAmount());
         GamePage obj = new GamePage();
-        StartPage start = new StartPage();
+        //StartPage start = new StartPage();
         //Color color = new Color(180, 192 ,250);
         //Color color = new Color(84, 151 ,220);
         //Color color = new Color(35, 67 ,170);
@@ -163,7 +163,7 @@ public class Settings_Interface2 extends javax.swing.JFrame {
         game.getContentPane().setBackground(color);
         //game.setVisible(true);
         //obj.setVisible(true);
-        start.setVisible(true);
+        game.setVisible(true);
         this.dispose();
        
        
@@ -184,37 +184,37 @@ public class Settings_Interface2 extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-//    public static void main(String args[]) {
-//        /* Set the Nimbus look and feel */
-//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-//         */
-//        try {
-//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-//                if ("Nimbus".equals(info.getName())) {
-//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-//                    break;
-//                }
-//            }
-//        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(Settings_Interface2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(Settings_Interface2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(Settings_Interface2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(Settings_Interface2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        }
-//        //</editor-fold>
-//
-//        /* Create and display the form */
-//        java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                new Settings_Interface2().setVisible(true);
-//            }
-//        });
-//    }
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Settings_Interface2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Settings_Interface2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Settings_Interface2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Settings_Interface2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Settings_Interface2().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

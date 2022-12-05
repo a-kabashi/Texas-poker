@@ -114,11 +114,11 @@ public class Game_Interface extends javax.swing.JFrame {
         });
 
         jLabel2.setFont(new java.awt.Font("Elephant", 2, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(153, 0, 153));
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Player-1 Name   :");
 
         jLabel3.setFont(new java.awt.Font("Elephant", 2, 12)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(204, 0, 204));
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Buy-In Amount  :");
 
         Player1_Name.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
@@ -128,50 +128,44 @@ public class Game_Interface extends javax.swing.JFrame {
         Player1_BuyInAmount.setForeground(new java.awt.Color(255, 255, 0));
 
         jLabel6.setFont(new java.awt.Font("Elephant", 2, 12)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(102, 0, 153));
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Player-2 Name   :");
 
         jLabel7.setFont(new java.awt.Font("Elephant", 2, 12)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(153, 0, 204));
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Buy-In Amount  :");
 
         Player2_Name.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
-        Player2_Name.setForeground(new java.awt.Color(153, 0, 204));
+        Player2_Name.setForeground(new java.awt.Color(255, 255, 0));
 
         Player2_BuyInAmount.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         Player2_BuyInAmount.setForeground(new java.awt.Color(255, 255, 0));
 
         jLabel10.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(153, 0, 153));
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Dealer");
 
-        jLabel11.setIcon(new javax.swing.ImageIcon("C:\\Users\\esraa\\OneDrive\\Documents\\NetBeansProjects\\TexasPoker-main\\src\\main\\java\\com\\mycompany\\images\\53.png")); // NOI18N
         jLabel11.setText("jLabel4");
 
-        jLabel12.setIcon(new javax.swing.ImageIcon("C:\\Users\\esraa\\OneDrive\\Documents\\NetBeansProjects\\TexasPoker-main\\src\\main\\java\\com\\mycompany\\images\\53.png")); // NOI18N
         jLabel12.setText("jLabel4");
 
-        jLabel13.setIcon(new javax.swing.ImageIcon("C:\\Users\\esraa\\OneDrive\\Documents\\NetBeansProjects\\TexasPoker-main\\src\\main\\java\\com\\mycompany\\images\\52.png")); // NOI18N
         jLabel13.setText("jLabel4");
 
-        jLabel14.setIcon(new javax.swing.ImageIcon("C:\\Users\\esraa\\OneDrive\\Documents\\NetBeansProjects\\TexasPoker-main\\src\\main\\java\\com\\mycompany\\images\\52.png")); // NOI18N
         jLabel14.setText("jLabel4");
 
-        jLabel15.setIcon(new javax.swing.ImageIcon("C:\\Users\\esraa\\OneDrive\\Documents\\NetBeansProjects\\TexasPoker-main\\src\\main\\java\\com\\mycompany\\images\\53.png")); // NOI18N
         jLabel15.setText("jLabel4");
 
-        jLabel16.setIcon(new javax.swing.ImageIcon("C:\\Users\\esraa\\OneDrive\\Documents\\NetBeansProjects\\TexasPoker-main\\src\\main\\java\\com\\mycompany\\images\\53.png")); // NOI18N
         jLabel16.setText("jLabel4");
 
-        jLabel17.setIcon(new javax.swing.ImageIcon("C:\\Users\\esraa\\OneDrive\\Documents\\NetBeansProjects\\TexasPoker-main\\src\\main\\java\\com\\mycompany\\images\\53.png")); // NOI18N
         jLabel17.setText("jLabel4");
 
-        jLabel18.setIcon(new javax.swing.ImageIcon("C:\\Users\\esraa\\OneDrive\\Documents\\NetBeansProjects\\TexasPoker-main\\src\\main\\java\\com\\mycompany\\images\\53.png")); // NOI18N
         jLabel18.setText("jLabel4");
 
-        jLabel19.setIcon(new javax.swing.ImageIcon("C:\\Users\\esraa\\OneDrive\\Documents\\NetBeansProjects\\TexasPoker-main\\src\\main\\java\\com\\mycompany\\images\\53.png")); // NOI18N
         jLabel19.setText("jLabel4");
 
+        jButton1.setBackground(new java.awt.Color(51, 153, 255));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 0));
         jButton1.setText("Deal 5rth Card");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -179,6 +173,9 @@ public class Game_Interface extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(51, 153, 255));
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 0));
         jButton2.setText("Deal Cards");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -186,6 +183,9 @@ public class Game_Interface extends javax.swing.JFrame {
             }
         });
 
+        jButton5.setBackground(new java.awt.Color(51, 153, 255));
+        jButton5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(255, 255, 0));
         jButton5.setText("Deal 4rth Card");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -193,9 +193,13 @@ public class Game_Interface extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("The Winner is:");
 
-        jLabel5.setText("display winner Name");
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 0));
+        jLabel5.setText("Display Winner Name");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -259,7 +263,7 @@ public class Game_Interface extends javax.swing.JFrame {
                                 .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 122, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 113, Short.MAX_VALUE)
                                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -351,7 +355,7 @@ public class Game_Interface extends javax.swing.JFrame {
     private void jButton2_RestartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2_RestartActionPerformed
         // TODO add your handling code here:
         this.dispose();
-        StarterGamePage sGP = new StarterGamePage();
+        StartPage sGP = new StartPage();
         sGP.setVisible(true);
         //Settings_Interface2 frame = new Settings_Interface2();
         //frame.setVisible(true);
@@ -432,37 +436,37 @@ public class Game_Interface extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-//    public static void main(String args[]) {
-//        /* Set the Nimbus look and feel */
-//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-//         */
-//        try {
-//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-//                if ("Nimbus".equals(info.getName())) {
-//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-//                    break;
-//                }
-//            }
-//        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(Game_Interface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(Game_Interface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(Game_Interface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(Game_Interface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        }
-//        //</editor-fold>
-//
-//        /* Create and display the form */
-//        java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                new Game_Interface().setVisible(true);
-//            }
-//        });
-//    }
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Game_Interface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Game_Interface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Game_Interface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Game_Interface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Game_Interface().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Player1_BuyInAmount;
