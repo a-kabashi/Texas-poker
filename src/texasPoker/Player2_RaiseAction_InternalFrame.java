@@ -35,7 +35,7 @@ public class Player2_RaiseAction_InternalFrame extends javax.swing.JFrame {
         ConfirmButton_Player2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Player 2");
+        setTitle("Raise");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N

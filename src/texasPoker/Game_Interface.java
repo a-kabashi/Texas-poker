@@ -5,6 +5,7 @@
 package texasPoker;
 
 import java.awt.event.ActionListener;
+import java.awt.Color;
 
 /**
  *
@@ -15,7 +16,14 @@ public class Game_Interface extends javax.swing.JFrame {
     /**
      * Creates new form Game_Interface
      */
-    public Game_Interface(){}
+    public Game_Interface()
+    {
+    initComponents();
+    //Color color = new Color(10, 14 ,147);
+    Color color = new Color(0, 04 ,204);
+    this.getContentPane().setBackground(color);
+    }
+    
     public Game_Interface(String player1_name, int p1_buy_in_amount, String player2_name, int p2_buy_in_amount) {
         initComponents();
         Player1_Name.setText(player1_name);
@@ -23,6 +31,8 @@ public class Game_Interface extends javax.swing.JFrame {
         Player2_Name.setText(player2_name);
         Player2_BuyInAmount.setText(p2_buy_in_amount + "");
     }
+    
+ 
     
     
     /**
@@ -67,7 +77,7 @@ public class Game_Interface extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Texas Poker Game");
-        setBackground(new java.awt.Color(0, 153, 0));
+        setBackground(new java.awt.Color(0, 0, 204));
 
         jLabel1.setFont(new java.awt.Font("Elephant", 3, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 204, 0));

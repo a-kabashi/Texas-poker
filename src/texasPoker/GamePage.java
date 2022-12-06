@@ -55,6 +55,7 @@ public class GamePage extends javax.swing.JFrame {
         jLabel18 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Texas Poker Game");
 
         jLayeredPane1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -109,7 +110,7 @@ public class GamePage extends javax.swing.JFrame {
         jLabelComputerCard1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/texasPoker/images/53.png"))); // NOI18N
         jLayeredPane1.add(jLabelComputerCard1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 400, 70, 100));
 
-        difficultyLevel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Easy", "Mesium", "Hard" }));
+        difficultyLevel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Easy", "Medium", "Hard" }));
         difficultyLevel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 difficultyLevelActionPerformed(evt);

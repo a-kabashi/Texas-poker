@@ -159,7 +159,8 @@ public class Settings_Interface2 extends javax.swing.JFrame {
         //Color color = new Color(180, 192 ,250);
         //Color color = new Color(84, 151 ,220);
         //Color color = new Color(35, 67 ,170);
-        Color color = new Color(10, 14 ,147);
+        //Color color = new Color(10, 14 ,147);
+        Color color = new Color(0, 04 ,204);
         game.getContentPane().setBackground(color);
         //game.setVisible(true);
         //obj.setVisible(true);

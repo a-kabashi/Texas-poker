@@ -55,7 +55,7 @@ public class Controller {
                this.hndBet("P->C"); 
                break;
             case "Draw":
-               this.gamePage.setDisplayWinner("Tide!!");
+               this.gamePage.setDisplayWinner("Tie!!");
                break;
             default:
                 break;
