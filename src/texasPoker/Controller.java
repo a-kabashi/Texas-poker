@@ -332,10 +332,19 @@ public class Controller {
     
     public void startGame(){
         
+        if(this.startPage.comb<2 )
+        {
         this.player.setName(this.startPage.getPlayerName());
         this.gamePage.setVisible(true);
         this.startPage.dispose();
         this.gamePage.setPlayerName(this.player.getName());
+        }
+        else if(this.startPage.comb==2)
+        {
+            Settings_Interface2 obj = new Settings_Interface2();
+            obj.setVisible(true); 
+            this.startPage.dispose();
+        }
     }
     
     public void launchGame(){

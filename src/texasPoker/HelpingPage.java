@@ -30,6 +30,7 @@ public class HelpingPage extends javax.swing.JFrame {
         jEditorPane1 = new javax.swing.JEditorPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Help Page");
 
         jEditorPane1.setText("In a game of Texas poker,\neach player is dealt two cards face down (the 'hole cards')\nThroughout several betting rounds,\nfive more cards are (eventually) dealt face up in the middle of the table\nThese face-up cards are called the 'community cards.' Each player is free to use\nthe community cards in combination with their hole cards to build a five-card poker hand.\n\n\nCall: match the amount of the big blind\nRaise: increase the bet within the specific limits of the game\nFold: throw the hand away\n\nYour mission is to construct your five-card poker hands using the best available five cards out of the seven total cards (the two hole cards and the five community cards).\n\nYou can do that by using both your hole cards in combination with three community cards, one hole card in combination with four community cards, or no hole cards.\n\nIf the cards on the table lead to a better combination, you can also play all five community cards and forget about yours.\n\nIn a game of Texas poker you can do whatever works to make the best five-card hand.\n\nIf the betting causes all but one player to fold, the lone remaining player wins the pot without having to show any cards.\n\nFor that reason, players don't always have to hold the best hand to win the pot. It's always possible a player can 'bluff' and get others to fold better hands.");
         jScrollPane1.setViewportView(jEditorPane1);
@@ -38,13 +39,11 @@ public class HelpingPage extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 638, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 638, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 334, Short.MAX_VALUE)
         );
 
         pack();

@@ -69,18 +69,18 @@ public class GamePage extends javax.swing.JFrame {
         });
         jLayeredPane1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 0, 90, 40));
 
-        computerBestHand.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        computerBestHand.setForeground(new java.awt.Color(255, 255, 255));
+        computerBestHand.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        computerBestHand.setForeground(new java.awt.Color(255, 255, 0));
         computerBestHand.setText("...");
         jLayeredPane1.add(computerBestHand, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 360, 140, 40));
 
-        playerBestHand.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        playerBestHand.setForeground(new java.awt.Color(255, 255, 255));
+        playerBestHand.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        playerBestHand.setForeground(new java.awt.Color(255, 255, 0));
         playerBestHand.setText("...");
         jLayeredPane1.add(playerBestHand, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 340, 100, 40));
 
         jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(255, 255, 0));
+        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
         jLabel19.setText("The player1 has:");
         jLayeredPane1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 350, 120, 20));
 
@@ -90,7 +90,7 @@ public class GamePage extends javax.swing.JFrame {
         jLayeredPane1.add(computerDecision, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 0, 10, 40));
 
         jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(255, 255, 0));
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("The player2 has:");
         jLayeredPane1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 366, 130, 20));
 
@@ -125,7 +125,7 @@ public class GamePage extends javax.swing.JFrame {
         jLayeredPane1.add(jLabelComputerCard2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 400, 70, 100));
 
         jTextFieldDisplayWinner.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jTextFieldDisplayWinner.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldDisplayWinner.setForeground(new java.awt.Color(255, 255, 0));
         jTextFieldDisplayWinner.setText("...");
         jLayeredPane1.add(jTextFieldDisplayWinner, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 90, 190, 90));
 
